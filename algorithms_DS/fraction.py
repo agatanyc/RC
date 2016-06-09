@@ -27,7 +27,6 @@ class Fraction(object):
 
         newnum = self.num*otherfraction.den + self.den*otherfraction.num
         newden = self.den * otherfraction.den
-
         return Fraction(newnum,newden)
 
     def __eq__ (self, other):
@@ -44,3 +43,9 @@ class Fraction(object):
         newnum = self.num * other.num
         newden = self.den * other.den
         return Fraction(newnum, newden)
+
+    def __sub__(self, otherfraction):
+        newnum = self.num * otherfraction.den - self.den * otherfraction.num
+        newden = self.den * otherfraction.den
+        return Fraction(newnum, newden)
+
