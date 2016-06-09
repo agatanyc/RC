@@ -5,7 +5,7 @@ The first element of a list is called the 'head', and the sublist of remaining
 elements is called the 'tail'.
 """
 
-def cons(x, xs=None):
+def cons(x, xs=None): # Construct a linked list
     """Return a list having the specified head and tail."""
     if xs:
         assert type(xs) == tuple
