@@ -1,5 +1,5 @@
 ' Implementation of a `fraction class`.'
-# from __future__ import *
+from __future__ import division
 
 def gcd(m, n):
     '''Greatest common divisor.'''
@@ -38,7 +38,9 @@ class Fraction(object):
     def __mul__(self, other):
         newnum =  self.num * other.den 
         newden = self.den * other.num
-        return Fraction(newnum, newden)
+        
+        common = gcd(newnum, newden)
+        return Fraction(newnum / common, newden / common)
 
     def __div__(self, other):
         newnum = self.num * other.num
