@@ -1,3 +1,4 @@
+# THIS MODULE IS WRITTEN IN PYTHON3
 """When designing classes, it is very important to distinguish between those
 that have the IS-A relationship (which requires inheritance) and those that
 have HAS-A relationships (with no inheritance)."""
@@ -111,3 +112,25 @@ class Connector(object):
 
         def getTo(self):
             return self.togate
+
+class NandGate(AndGate):
+ 
+    def performGateLogic(self):
+        if super().performGateLogic() == 1:
+            return 0
+        else:
+            return 1
+
+class NorGate(BinaryGate):
+
+    def performGateLogic(self):
+        if super().performGateLogic() == 1:
+            return 0
+        else:
+            return 1
+
+if __name__ == '__main__':
+    g1 = AndGate('G1')
+    g2 = NandGate('G2')
+
+    print(g2.getOutput())
