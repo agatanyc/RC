@@ -15,8 +15,17 @@ class Fraction(object):
 
     def __init__(self, top, bottom):
 
-        self.num = top
-        self.den = bottom
+        if isinstance(top, int):
+            self.num = top
+        else:
+            raise TypeError ("`top` must be an integer")
+
+        if isinstance(bottom, int):
+            self.den = bottom
+        else:
+            raise TypeError ("`bottom` must be an integer")
+
+
 
     def get_num(self):
         return self.num
@@ -61,6 +70,20 @@ class Fraction(object):
     def __gr__(self, other):
         return self.num * other.den > self.den * other.num
 
-self = Fraction(2, 3)
-other = Fraction(1, 2)
-print self.__gr__(other)
+if __name__ == '__main__':
+
+    f = Fraction(1,3)
+    g = Fraction(1,5)
+    h = f+g
+    print(f.get_num())
+    print(g.get_den())
+    j = Fraction(2,6)
+    
+    print(h)
+    
+    print(f<g)
+    print(g<f)
+    print(g==f)
+    print(f==j)
+    print(f!=j)
+   
