@@ -2,8 +2,7 @@
 empty list is represented by None.
 
 The first element of a list is called the 'head', and the sublist of remaining
-elements is called the 'tail'.
-"""
+elements is called the 'tail'.  """
 
 def cons(x, xs=None): # Construct a linked list
     """Return a list having the specified head and tail."""
@@ -39,3 +38,6 @@ def size_loop(xs):
         r += 1
         xs = tail(xs)
     return r
+
+def is_empty(xs):
+    return xs == None
