@@ -1,9 +1,15 @@
-"""Implementation of `Node` class."""
+"Implementation on a `Node` class."""
 
 class Node(object):
-    def __init__(self, data):
-        self.data = data
+    def __init__(self, init_data):
+        self.data = init_data
         self.next = None
+
+    def get_data(self):
+        return self.data
+
+    def get_next(self):
+        return self.next
 
     def set_data(self, new_data):
         self.data = new_data
@@ -11,8 +17,7 @@ class Node(object):
     def set_next(self, new_next):
         self.next = new_next
 
-    def get_data(self):
-        return self.data
+if __name__ == '__main__':
+    n = Node(5)
+    print n.get_data()
 
-    def get_next(self):
-        return self.next

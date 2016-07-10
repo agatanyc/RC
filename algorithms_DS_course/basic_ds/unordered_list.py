@@ -6,6 +6,7 @@ from node import Node
 class UnorderedList(object):
     def __init__(self):
         self.head = None
+        self.tail = None
 
     def is_empty(self):
         return self.head == None
@@ -13,6 +14,7 @@ class UnorderedList(object):
     def add(self, item):
         temp = Node(item) # temp is a Node instance
         temp.set_next(self.head)
+
         self.head = temp
     
     def size(self):
@@ -48,11 +50,23 @@ class UnorderedList(object):
         else:
             previous.set_next(current.get_next())
 
+    def append(self, item):
+        current = self.head
+        previous = None
+        temp = Node(item)
+        if current:
+            while current:
+                previous = current
+                current = current.get_next()
+
+        previous.set_next(temp)
+
 if __name__ == '__main__':
 
     un = UnorderedList()
     assert un.is_empty()
-
+    un.append(7)
+"""
     un.add(5)
     un.add(9)
 
@@ -63,5 +77,6 @@ if __name__ == '__main__':
     un.remove(9)
     assert un.size()== 1
 
-
-
+    un.append(8)
+    assert un.size() == 2
+    """
