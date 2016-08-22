@@ -9,7 +9,7 @@ yesterday."""
 
 
 def find_profits(xs):
-    """Return list of lists of [sell price, purchase price, profit.]"""
+    """Return list of lists [sell price, purchase price, profit.]"""
     mn = 0       # min - purchase price
     profit = 0   # max- sell price
     result = []
@@ -24,7 +24,6 @@ def find_profits(xs):
     return result
 
 def find_best_profit(xs):
-    """Return the max profit that could be made from one purchase.""" 
     return max(find_profits(xs), key=lambda row: row[2])
 
 

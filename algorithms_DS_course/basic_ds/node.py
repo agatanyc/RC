@@ -17,6 +17,12 @@ class Node(object):
     def set_next(self, new_next):
         self.next = new_next
 
+    def remove(self):
+        next_node = self.get_next()
+        data = next_node.get_data()
+        self.set_data(data)
+        self.set_next(next_node.get_next())
+
 if __name__ == '__main__':
     n = Node(5)
     print n.get_data()
