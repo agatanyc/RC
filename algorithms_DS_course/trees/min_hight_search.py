@@ -24,8 +24,6 @@ class Node(object):
         return self.right
     def getLeft(self):
         return self.left
-    def getHeight(self):
-        return self.height
     def getDepth(self):
         return self.depth
 
@@ -49,6 +47,3 @@ def inorder(node):
         print node
         inorder(node.getRight())
 
-if __name__ == "__main__":
-    print 'XXXXXXXXXXXXXXXXXXXX'
-    a = 5

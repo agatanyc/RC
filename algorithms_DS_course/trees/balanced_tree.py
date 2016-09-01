@@ -1,9 +1,9 @@
-"""Check if binary tree is balanced. The height of sub trees can not differ
+"""Check if binary tree is balanced. The height of sub-trees can not differ
 by more then 1"""
 
 from min_hight_search import Node
 
-# recursively
+# recursive solution
 
 def maxDepth(node):
     if node:
