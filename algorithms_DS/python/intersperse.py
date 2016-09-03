@@ -17,7 +17,7 @@ def intersperse(xs):
             r.append(x[i])
     return r
 
-# modify problem to allow the sublist be different length
+# modify problem to allow the sublist to be different length
 def intersperse_2(ys):
     r = []
     range_length = len(max(ys, key=len))

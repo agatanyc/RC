@@ -25,5 +25,13 @@ class Node(object):
 
 if __name__ == '__main__':
     n = Node(5)
+    m = 7
+    
     print n.get_data()
+    print n.get_next()
+    n.set_next(m)
+    print n.get_next().get_data()
+    print n.remove()
+
+
 
