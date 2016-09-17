@@ -1,4 +1,4 @@
-"""Visit every node in a graph. Try both bfs and dfs methods."""
+"""Visit every node in a NOT DIRECTED  graph. Try both bfs and dfs methods."""
 
 graph = {'A': set(['B', 'C']),
          'B': set(['A', 'D', 'E']),
@@ -7,6 +7,7 @@ graph = {'A': set(['B', 'C']),
          'E': set(['B', 'F']),
          'F': set(['C', 'E'])}
 
+# dfs uses Stack DS
 def dfs(graph, start):
     visited = set()
     stack = [start]
@@ -20,6 +21,7 @@ def dfs(graph, start):
 
 assert dfs(graph, 'B') == set(['A', 'C', 'B', 'E', 'D', 'F'])
 
+# bfs uses queue DS
 def bfs(graph, start):
     visited = set()
     queue = [start]
