@@ -8,7 +8,7 @@ def tip(n, xs):
         print x
         r += x
     avarage = r / length
-    tip = n * avarage
+  :  tip = n * avarage
     return tip
 
 if __name__ == '__main__':
