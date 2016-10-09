@@ -1,0 +1,27 @@
+# Convert a “relative URL” to an absolute URL given a “base URL
+
+
+http://example.com/index?key=value#top
+
+http:// = scheme
+example.com = host
+/index = path
+?key=value = query string
+#top = bookmark
+
+http://example.com/index?key=value#top + #bottom -> http://example.com/index?key=value#bottom
+
+http://example.com/index?key=value + #bottom -> http://example.com/index?key=value#bottom
+
+http://example.com/index?key=value#top + ?key2=value2 -> http://example.com/index?key2=value2
+
+http://example.com/index + ?key2=value2 -> http://example.com/index?key2=value2
+
+http://example.com/index/?key=value#top + onepage -> http://example.com/index/onepage
+
+http://example.com/index?key=value#top + /onepage -> http://example.com/onepage
+
+http://example.com/ + /onepage  -> http://example.com/onepage
+
+http://example.com/ + //example.org -> http://example.org
+
