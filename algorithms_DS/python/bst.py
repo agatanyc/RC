@@ -1,4 +1,4 @@
-'''Return True if tre is a bst, Flase otherwise.'''
+'''Return True if tree is a bst, Flase otherwise.'''
 
 class Node(object):
     def __init__(self, v, l= None, r=None):
@@ -27,5 +27,7 @@ def is_bst(n):
 
 if __name__ == "__main__":
   n = Node(6, Node(2, Node(1), Node(16)), Node(10, Node(5), Node(12)))
+  n2 = Node(6, Node(2, Node(1), Node(3)), Node(10, Node(7), Node(12)))
 
   assert is_bst(n) == False
+  assert is_bst(n2) == True
