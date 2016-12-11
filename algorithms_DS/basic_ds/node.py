@@ -1,4 +1,4 @@
-"Implementation on a `Node` class."""
+"""Implementation on a `Node` class."""
 
 class Node(object):
     def __init__(self, init_data):

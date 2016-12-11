@@ -12,7 +12,7 @@ def add_node(tree, node):
         add_node(tree.right, node)
     elif tree.left and node.value < tree.value:
         add_node(tree.left, node)
-    elif tree.righ and node.value < tree.value:
+    elif tree.right and node.value < tree.value:
         add_node(tree.left, node)
     elif tree.right and node.value > tree.value:
         add_node(tree.right, node)

@@ -43,6 +43,7 @@ class UnorderedList(object):
             if current.get_data() == item:
                 found = True
             else:
+                previous = current
                 current = current.get_next()
 
         if previous == None:
